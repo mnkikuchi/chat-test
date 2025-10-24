@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assistente de Vendas Ituran (Teste)</title>
+    <link rel="stylesheet" href="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/themes/df-messenger-default.css">
+</head>
+<body>
+
+    <header style="text-align: center; padding: 50px;">
+        <h1>Página de Teste do Consultor Ituran</h1>
+        <p>Olá! Seu assistente de vendas, o "Pedro Consultor", está pronto para o teste.</p>
+        <p>Clique no ícone de chat no canto inferior direito para iniciar a conversa.</p>
+    </header>
+
+    <script src="https://www.gstatic.com/dialogflow-console/fast/df-messenger/prod/v1/df-messenger.js"></script>
+
+    <df-messenger
+        project-id="n8n-integration2-470823"
+        agent-id="cc4642d0-fb8c-43fe-b906-ac333d388b65"
+        language-code="pt-br"
+        max-query-length="-1">
+        
+        <df-messenger-chat-bubble
+            chat-title="lead_assistant">
+        </df-messenger-chat-bubble>
+    </df-messenger>
+
+    <style>
+        df-messenger {
+            /* Garante que o widget esteja acima de outros elementos e fixo na tela */
+            z-index: 999;
+            position: fixed;
+            
+            /* Personalização de cores e fontes */
+            --df-messenger-font-color: #000;
+            --df-messenger-font-family: Google Sans, sans-serif; /* Adicionado fallback de fonte */
+            --df-messenger-chat-background: #f3f6fc;
+            --df-messenger-message-user-background: #d3e3fd;
+            --df-messenger-message-bot-background: #fff;
+            
+            /* Posicionamento na tela */
+            bottom: 16px;
+            right: 16px;
+        }
+
+        /* Estilo para garantir que o corpo da página tenha espaço para o chat */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+    </style>
+
+</body>
+</html>
